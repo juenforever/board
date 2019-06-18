@@ -128,7 +128,7 @@ public class PostReplyController extends HttpServlet {
 
 		// file data 받기=======================================================
 		// DB에 저장할 파일명
-			
+
 		String attachment_name1 = multi.getFilesystemName("upfile1");
 		if (attachment_name1 != null) {
 			logger.debug("attachment_name1:{}", attachment_name1);

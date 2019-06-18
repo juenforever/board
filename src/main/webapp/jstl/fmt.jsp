@@ -9,11 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>formatDate</h2>
-<c:set var = "dt" value ="<%=new Date()%>"/>
-dt : ${dt }<br>
-dt : <fmt:formatDate value = "${dt }"/><br>
-<fmt:setLocale value = "de_DE"/>
+	<h2>formatDate</h2>
+	dt : ${dt }
+	<br> dt :
+	<fmt:formatDate value="${dt }" />
+	<br>
+	<fmt:setLocale value="de_DE" />
 
 
 </body>
