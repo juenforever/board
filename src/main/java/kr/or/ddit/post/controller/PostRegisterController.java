@@ -24,8 +24,8 @@ import kr.or.ddit.util.PartUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+//import com.oreilly.servlet.MultipartRequest;
+//import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @WebServlet("/postRegister")
 @MultipartConfig(maxFileSize = 1024 * 1024 * 3, maxRequestSize = 1024 * 1024 * 150)
