@@ -1,0 +1,2 @@
+GREETING = こんにちは
+VISITOR = あなたのidは {0}です

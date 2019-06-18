@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+	<select id="boardList" resultType="BoardVo">
+		select * from board where
+		board_usage = 'yes'
+	</select>
+
+	<select id="getAllBoardList" resultType="BoardVo">
+		select*from board
+
+	</select>
+
+	<insert id="boardInsert" parameterType="BoardVo">
+		insert into board
+		values(SEQ_BOARD_ID.nextval,#{board_name},#{board_usage},
+		sysdate,
+		#{user_id})
+	</insert>
+
+	<update id="boardDelete" parameterType="int">
+		UPDATE board
+		SET
+		board_usage = #{board_usage}
+		WHERE
+		board_id = #{board_id}
+	</update>
+
+	<update id="boardUpdate" parameterType="BoardVo">
+		UPDATE board
+		SET
+		board_usage = #{board_usage}
+		WHERE
+		board_id=#{board_id}
+	</update>
+
+	<select id="board" parameterType="int" resultType="boardVo">
+		select*from board
+		where board_id = #{board_id}
+	</select>
+
+</mapper>
